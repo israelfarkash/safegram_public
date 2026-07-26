@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="safeGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#064e3b" stroke="#065f46" stroke-width="2"/>
+  
+  <!-- Shield with Checkmark -->
+  <path d="M100 40 L145 60 V105 C145 140 100 165 100 165 C100 165 55 140 55 105 V60 L100 40Z" fill="url(#safeGradDark)"/>
+  <path d="M85 105 L95 115 L115 95" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

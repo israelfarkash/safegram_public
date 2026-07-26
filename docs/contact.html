@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר — SafeGram</title>
+    <meta name="description" content="צור קשר עם צוות SafeGram — תמיכה, משוב והצעות לשיפור המוצר.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+<div class="page-glow"></div>
+
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="brand"><img src="images/app_icon.png" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" alt=""><span>Safe<span>Gram</span></span></a>
+        <nav class="nav-links">
+            <a href="index.html" data-nav="home">בית</a>
+            <a href="features.html" data-nav="features">יכולות</a>
+            <a href="screenshots.html" data-nav="screenshots">צילומי מסך</a>
+            <a href="download.html" data-nav="download">הורדה</a>
+            <a href="faq.html" data-nav="faq">שאלות נפוצות</a>
+            <a href="about.html" data-nav="about">אודות</a>
+            <a href="contact.html" data-nav="contact">צור קשר</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="download.html" class="btn btn-primary">הורדה</a>
+            <button type="button" class="nav-toggle" aria-label="תפריט"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-eyebrow">יצירת קשר</span>
+            <h1>נשמח <span class="text-gradient">לשמוע ממך</span></h1>
+            <p>שאלה על התקנה, משוב על המוצר או דיווח על בעיה — אנחנו כאן.</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+        <div class="container contact-grid">
+            <article class="card">
+                <h3 style="margin-bottom:16px">דרכים לפנות אלינו</h3>
+                <ul style="color:var(--text-secondary);display:flex;flex-direction:column;gap:16px">
+                    <li><i class="fa-solid fa-headset text-accent"></i> <strong>תמיכה טכנית</strong> — ניתן לפנות אלינו ישירות דרך הטופס.</li>
+                    <li><i class="fa-solid fa-book text-accent"></i> <strong>שאלות נפוצות</strong> — רוב התשובות כבר שם.<br><a href="faq.html" class="text-accent">עבור ל-FAQ</a></li>
+                    <li><i class="fa-solid fa-download text-accent"></i> <strong>בעיות התקנה</strong> — ראה את <a href="download.html" class="text-accent">מדריך ההורדה</a> לפני פנייה.</li>
+                </ul>
+            </article>
+
+            <article class="card contact-form">
+                <h3 style="margin-bottom:16px">טופס מהיר</h3>
+                <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px">הטופס יפתח דיווח חדש ב-GitHub עם הפרטים שמילאת.</p>
+                <form id="contact-form">
+                    <label for="name">שם</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                    <label for="email">אימייל</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <label for="topic">נושא</label>
+                    <select id="topic" name="topic">
+                        <option value="support">תמיכה טכנית</option>
+                        <option value="feedback">משוב על המוצר</option>
+                        <option value="access">בקשת גישה / הפעלה</option>
+                        <option value="other">אחר</option>
+                    </select>
+                    <label for="message">הודעה</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> שליחה</button>
+                </form>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div><a href="index.html" class="brand"><img src="images/app_icon.png" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" alt="" width="36" height="36"><span>Safe<span>Gram</span></span></a></div>
+        <div><h4>מוצר</h4><ul><li><a href="faq.html">שאלות נפוצות</a></li></ul></div>
+        <div><h4>חברה</h4><ul><li><a href="about.html">אודות</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><p>© 2026 SafeGram</p></div>
+</footer>
+<script src="site.js"></script>
+<script>
+document.getElementById("contact-form")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const topic = document.getElementById("topic").selectedOptions[0].text;
+  const message = document.getElementById("message").value.trim();
+  const title = encodeURIComponent("[SafeGram] " + topic + " — " + name);
+  const body = encodeURIComponent(message + "\n\n— " + name + "\n" + document.getElementById("email").value.trim());
+  window.open("contact.html/new?title=" + title + "&body=" + body, "_blank", "noopener");
+});
+</script>
+</body>
+</html>

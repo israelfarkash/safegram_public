@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צילומי מסך — SafeGram</title>
+    <meta name="description" content="תצוגות ממשק SafeGram: בחירת דרגת הגנה, רשימת צ'אטים, בקשת גישה וחוויית שימוש נקייה.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="screenshots">
+<div class="page-glow"></div>
+
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="brand"><img src="images/app_icon.png" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" alt=""><span>Safe<span>Gram</span></span></a>
+        <nav class="nav-links">
+            <a href="index.html" data-nav="home">בית</a>
+            <a href="features.html" data-nav="features">יכולות</a>
+            <a href="screenshots.html" data-nav="screenshots">צילומי מסך</a>
+            <a href="download.html" data-nav="download">הורדה</a>
+            <a href="faq.html" data-nav="faq">שאלות נפוצות</a>
+            <a href="about.html" data-nav="about">אודות</a>
+            <a href="contact.html" data-nav="contact">צור קשר</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="download.html" class="btn btn-primary">הורדה</a>
+            <button type="button" class="nav-toggle" aria-label="תפריט"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-eyebrow">ממשק המשתמש</span>
+            <h1>מסכים <span class="text-gradient">נקיים וברורים</span></h1>
+            <p>תצוגות המחשה של חוויית SafeGram באפליקציה — ללא כלים פנימיים, רק מה שמשתמשים רואים.</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+        <div class="container shot-grid">
+            <figure class="shot-item">
+                <div class="phone-shell">
+                    <div class="phone-screen">
+                        <div class="phone-status"><span>SafeGram</span><span>9:41</span></div>
+                        <div class="phone-app-bar"><i class="fa-solid fa-sliders"></i> בחירת דרגת הגנה</div>
+                        <div class="phone-chats" style="gap:10px">
+                            <div class="chat-row" style="flex-direction:column;align-items:stretch"><strong>דרגה 1</strong><span style="font-size:0.72rem;color:var(--text-muted)">רק צ'אטים פרטיים</span></div>
+                            <div class="chat-row" style="border:2px solid var(--accent)"><strong>דרגה 2</strong><span style="font-size:0.72rem">ערוצים מסוננים</span></div>
+                            <div class="chat-row"><strong>דרגה 3</strong><span style="font-size:0.72rem;color:var(--text-muted)">ללא חדשות</span></div>
+                            <div class="chat-row"><strong>דרגה 4</strong><span style="font-size:0.72rem;color:var(--text-muted)">כולל חדשות</span></div>
+                        </div>
+                    </div>
+                </div>
+                <figcaption>בחירת מסלול הגנה קבוע בהתחלה (ללא אפשרות שינוי בהמשך)</figcaption>
+            </figure>
+
+            <figure class="shot-item">
+                <div class="phone-shell">
+                    <div class="phone-screen">
+                        <div class="phone-status"><span>SafeGram</span><span>9:41</span></div>
+                        <div class="phone-app-bar"><i class="fa-solid fa-shield-halved"></i> צ'אטים</div>
+                        <div class="phone-chats">
+                            <div class="chat-row"><div class="chat-avatar"></div><div><strong>דוד כהן</strong><br><span style="font-size:0.72rem;color:var(--text-muted)">מעולה, נדבר מחר</span></div></div>
+                            <div class="chat-row"><div class="chat-avatar"></div><div><strong>ערוץ לימוד</strong><br><span style="font-size:0.72rem;color:var(--accent)">מאושר</span></div></div>
+                            <div class="chat-row blocked"><div class="chat-avatar"></div><div><strong>ערוץ לא זמין</strong><br><span class="chat-meta">לא בדרגה שלך</span></div></div>
+                        </div>
+                    </div>
+                </div>
+                <figcaption>רשימת שיחות — פרטי ומאושר</figcaption>
+            </figure>
+
+            <figure class="shot-item">
+                <div class="phone-shell">
+                    <div class="phone-screen" style="justify-content:center;padding:16px">
+                        <div class="card mock-dialog" style="box-shadow:var(--shadow-md);padding:20px 16px">
+                            <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-soft);margin:0 auto 12px;display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-lock" style="color:var(--accent)"></i></div>
+                            <h4>גישה מוגבלת</h4>
+                            <p>הערוץ אינו זמין בדרגה הנוכחית. ניתן לשלוח בקשה עם נימוק קצר.</p>
+                            <span class="mock-btn">שליחת בקשה</span>
+                        </div>
+                    </div>
+                </div>
+                <figcaption>בקשת גישה מתוך האפליקציה</figcaption>
+            </figure>
+
+            <figure class="shot-item">
+                <div class="phone-shell">
+                    <div class="phone-screen">
+                        <div class="phone-status"><span>SafeGram</span><span>9:41</span></div>
+                        <div class="phone-app-bar"><i class="fa-solid fa-hourglass-half"></i> סטטוס בקשה</div>
+                        <div class="phone-chats" style="justify-content:center;text-align:center;padding:24px">
+                            <i class="fa-solid fa-circle-check" style="font-size:2rem;color:var(--accent);margin-bottom:12px"></i>
+                            <strong>בקשה בטיפול</strong>
+                            <p style="font-size:0.78rem;color:var(--text-muted);margin-top:8px">תקבל התראה כשהגישה תאושר</p>
+                        </div>
+                    </div>
+                </div>
+                <figcaption>מעקב אחרי בקשת גישה</figcaption>
+            </figure>
+        </div>
+        <p class="text-center" style="margin-top:40px"><a href="download.html" class="btn btn-primary btn-lg">נסה בעצמך — הורד עכשיו</a></p>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div><a href="index.html" class="brand"><img src="images/app_icon.png" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" alt="" width="36" height="36"><span>Safe<span>Gram</span></span></a></div>
+        <div><h4>מוצר</h4><ul><li><a href="features.html">יכולות</a></li><li><a href="download.html">הורדה</a></li></ul></div>
+        <div><h4>חברה</h4><ul><li><a href="about.html">אודות</a></li><li><a href="contact.html">צור קשר</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><p>© 2026 SafeGram</p></div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
